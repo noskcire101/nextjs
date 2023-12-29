@@ -1,7 +1,11 @@
-import Image from "next/image";
+import { Metadata } from "next";
 
-export const metadata = {
-  title: "About Me",
+export const metadata: Metadata = {
+  title: "About Page Title",
+  description: "About Page description",
+  openGraph: {
+    images: "https://photos.sphereshowcase.com/tBJczsgyzUAP3woETDr31.jpg",
+  },
 };
 
 export default function About() {
