@@ -24,7 +24,7 @@ export default function Sidemenu({ isToggle, handleClose, position }: Props) {
         }
         initial="initial"
         animate={isToggle ? "open" : "closed"}
-        className="h-full w-52 fixed text-white z-10 top-0 left-0 bg-[#1e1e1e] overflow-x-hidden pt-5"
+        className="h-full w-52 fixed text-white z-10 top-0 left-0 bg-[#1e1e1e] overflow-x-hidden"
       >
         <div
           className={`${

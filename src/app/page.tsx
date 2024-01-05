@@ -1,16 +1,6 @@
 import { Metadata } from "next";
 import Image from "next/image";
-export const metadata: Metadata = {
-  title: {
-    default:
-      "This is a default tilte, will only appear if page doesnt have a title",
-    template: "%s | Template title",
-  },
-  description: "This is a homepage description",
-  openGraph: {
-    images: "https://photos.sphereshowcase.com/tBJczsgyzUAP3woETDr31.jpg",
-  },
-};
+
 export default function Home() {
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-24">

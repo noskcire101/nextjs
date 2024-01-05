@@ -23,14 +23,16 @@ function MenuItems({ item, handleClose }: MenuItemsProps) {
 
   const isOpenMainMenu = useMemo(
     () => ({
-      backgroundColor: activeMainMenu || openSubMenu ? "#292929" : "",
+      backgroundColor: activeMainMenu || openSubMenu ? "var(--tab-open)" : "",
     }),
     [activeMainMenu, openSubMenu]
   );
   const isActiveMainMenuTab = useCallback(
     (subItemPath: string) => ({
       backgroundColor:
-        subItemPath.split("/")[1] === pathname.split("/")[1] ? "#303030" : "",
+        subItemPath.split("/")[1] === pathname.split("/")[1]
+          ? "var(--tab-active)"
+          : "",
     }),
     [pathname]
   );
@@ -39,7 +41,7 @@ function MenuItems({ item, handleClose }: MenuItemsProps) {
       backgroundColor:
         subItemPath.split("/")[1] === pathname.split("/")[1] &&
         subItemPath.split("/")[2] === pathname.split("/")[2]
-          ? "#303030"
+          ? "var(--tab-active)"
           : "",
     }),
     [pathname]
