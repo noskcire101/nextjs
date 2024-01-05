@@ -9,12 +9,12 @@ import {
 } from "@/constant/framer-motion/sidemenu";
 import { usePathname } from "next/navigation";
 
-interface MenuItemsProps {
+interface Props {
   item: IMenuItems;
   handleClose: () => void;
 }
 
-function MenuItems({ item, handleClose }: MenuItemsProps) {
+function MenuItems({ item, handleClose }: Props) {
   const pathname = usePathname();
   const [openSubMenu, setOpenSubMenu] = useState<boolean | undefined>(false);
   const [activeMainMenu, setActiveMainMenu] = useState<boolean | undefined>(
