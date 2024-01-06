@@ -1,24 +1,26 @@
 const hoverColor = "#303030";
 
 
-export const sideMainMenuVariants = {
+export const mainMenuVariants = {
   sizeIncrease: {
-    scale: 1.1,
-    originX: 0,
+    scale: 1.03,
+    originX: 0.35,
+    originY: 1,
     backgroundColor: hoverColor,
     transition: {
-      duration: 0.2,
+      duration: 0.1,
     },
   },
 };
-export const sideSubMenuVariants = {
+
+export const subMenuVariants = {
   open: {
     opacity: 1,
     height: "auto",
     scale: 1,
     filter: "blur(0px)",
     transition: {
-      duration: 0.2,
+      duration: 0.1,
     },
   },
   closed: {
@@ -33,11 +35,12 @@ export const sideSubMenuVariants = {
     },
   },
   sizeIncrease: {
-    scale: 1.1,
-    originX: 0,
+    scale: 1.03,
+    originX: 0.35,
+    originY: 1,
     backgroundColor: hoverColor,
     transition: {
-      duration: 0.2,
+      duration: 0.1,
     },
   },
 };
@@ -47,7 +50,7 @@ export const menuPositionLeftVariants = {
     x: 0,
     opacity: 1,
     transition: {
-      duration: 1,
+      duration: 0.5,
       type: "tween",
       ease: "easeOut",
     },

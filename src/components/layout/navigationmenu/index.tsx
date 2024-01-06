@@ -6,20 +6,21 @@ import Sidemenu from "@/components/layout/navigationmenu/sidemenu";
 export default function NavigationMenu() {
   const sideNavPosition = "left";
   const {
-    booleanState: isToggleSideMenu,
-    setBooleanTrue: handleOpenSideMenu,
-    setBooleanFalse: handleCloseSideMenu,
+    booleanState: isToggleMenu,
+    setBooleanTrue: handleOpenMenu,
+    setBooleanFalse: handleCloseMenu,
   } = useToggleBooleanState();
+
   return (
     <div className="fixed z-[99] w-full">
       <Headermenu
         sideNavPosition={sideNavPosition}
-        handleOpenSideMenu={handleOpenSideMenu}
+        handleOpenSideMenu={handleOpenMenu}
       />
       <Sidemenu
-        isToggle={isToggleSideMenu}
+        isToggle={isToggleMenu}
         position={sideNavPosition}
-        handleClose={handleCloseSideMenu}
+        handleClose={handleCloseMenu}
       />
     </div>
   );

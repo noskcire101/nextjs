@@ -6,7 +6,7 @@ import { MdClose } from "react-icons/md";
 import {
   menuPositionLeftVariants,
   menuPositionRightVariants,
-} from "@/constant/framer-motion/sidemenu";
+} from "@/constant/framer-motion/navigationmenu";
 interface Props {
   isToggle: boolean;
   handleClose: () => void;

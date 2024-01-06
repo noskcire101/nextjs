@@ -24,7 +24,7 @@ export default function Headermenu({
       />
       <div
         className={`${
-          sideNavPosition === "left" ? "ml-12" : "mr-12 justify-end"
+          sideNavPosition === "left" ? "ml-14" : "mr-14 justify-end"
         } flex`}
       >
         {menuItems.map((item: IMenuItems) => (

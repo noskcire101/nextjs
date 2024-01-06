@@ -1,13 +1,13 @@
-"use client";
 import { IMenuItems, ISubMenuItems } from "@/models/layout";
 import Link from "next/link";
 import { useCallback, useEffect, useMemo, useState } from "react";
 import { motion } from "framer-motion";
 import {
-  sideMainMenuVariants,
-  sideSubMenuVariants,
-} from "@/constant/framer-motion/sidemenu";
+  mainMenuVariants,
+  subMenuVariants,
+} from "@/constant/framer-motion/navigationmenu";
 import { usePathname } from "next/navigation";
+import { FaAngleDown } from "react-icons/fa6";
 
 interface Props {
   item: IMenuItems;
@@ -64,7 +64,7 @@ function MenuItems({ item, handleClose }: Props) {
       {item.submenu ? (
         <div style={isOpenMainMenu}>
           <motion.div
-            variants={sideMainMenuVariants}
+            variants={mainMenuVariants}
             whileHover="sizeIncrease"
             className="px-4 py-2 text-lg inline-flex w-full justify-start items-center cursor-pointer"
             key={item.name}
@@ -72,13 +72,14 @@ function MenuItems({ item, handleClose }: Props) {
               setOpenSubMenu((prev) => !prev);
             }}
           >
-            {item.icon} <div className="ml-2 w-fit">{item.name}</div>
+            {item.icon} <div className="mx-2 w-fit">{item.name}</div>{" "}
+            <FaAngleDown className="mt-1" />
           </motion.div>
           {openSubMenu &&
             item.submenu.map((subItem: ISubMenuItems) => (
               <motion.div
                 key={`${item.name}-${subItem.name}`}
-                variants={sideSubMenuVariants}
+                variants={subMenuVariants}
                 whileHover="sizeIncrease"
                 initial="closed"
                 animate="open"
@@ -98,7 +99,7 @@ function MenuItems({ item, handleClose }: Props) {
       ) : (
         <motion.div
           key={item.name}
-          variants={sideMainMenuVariants}
+          variants={mainMenuVariants}
           whileHover="sizeIncrease"
         >
           <Link
