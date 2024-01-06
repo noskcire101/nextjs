@@ -1,4 +1,4 @@
-const hoverColor = "#303030";
+const hoverColor = "var(--tab-active)";
 
 
 export const mainMenuVariants = {

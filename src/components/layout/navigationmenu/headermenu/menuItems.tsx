@@ -60,12 +60,13 @@ export default function MenuItems({ item, sideNavPosition }: Props) {
   return (
     <>
       {item.submenu ? (
-        <div className={"overflow-hidden"} style={isOpenMainMenu}>
+        <div className={"overflow-hidden"}>
           <motion.button
             variants={mainMenuVariants}
+            style={isOpenMainMenu}
             whileHover="sizeIncrease"
             className={
-              "cursor-pointer flex items-center text-base text-[white] m-0 p-4 hover:bg-[var(--tab-active)] "
+              "cursor-pointer flex items-center text-base text-[white] m-0 p-4 "
             }
             onClick={() => {
               setOpenSubMenu((prev) => !prev);
@@ -96,7 +97,7 @@ export default function MenuItems({ item, sideNavPosition }: Props) {
                       setOpenSubMenu(false);
                     }}
                     className={
-                      "float-none no-underline block text-left px-9 py-3 hover:bg-[var(--tab-active)] cursor-pointer"
+                      "float-none no-underline block text-left px-9 py-3 cursor-pointer"
                     }
                   >
                     {subItem.name}
